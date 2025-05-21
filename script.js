@@ -21,7 +21,7 @@ function getComputerChoice(){
     }
 }
 
-let input = prompt("Enter your choice")
+let input = prompt("Please enter your choice -- rock, paper, scissors")
 function getHumanChoice(){
     if(input.toLowerCase() === "rock"){
         console.log("You choose "+ input.toLowerCase())
@@ -29,7 +29,7 @@ function getHumanChoice(){
     else if(input.toLowerCase() === "paper"){
         console.log("You choose "+ input.toLowerCase())
     }
-    else if(input.toLocaleLowerCase() === "scissors"){
+    else if(input.toLowerCase() === "scissors"){
         console.log("You choose "+ input.toLowerCase())
     }
     else{
@@ -49,7 +49,7 @@ function playRound(humanChoice, computerChoice){
     computerScore++
    }
    else if(input === "rock" && cInput === "scissors"){
-    console.log("You Win, Rock beats Sciccors")
+    console.log("You Win, Rock beats Scissors")
     humanScore++
    }
    else if(input === "paper" && cInput === "rock"){
@@ -82,9 +82,6 @@ for(i=0;i<5;i++){
    play()
     console.log(computerScore)
     console.log(humanScore)
-   if(computerScore===3 || humanScore === 3){
-        break
-    }
 }
 
 if(computerScore>humanScore){
